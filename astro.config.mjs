@@ -6,12 +6,12 @@ import catppuccin from '@catppuccin/starlight';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://firelink-library.github.io',
-  base: '/', // TODO: adicionar base do repositorio
+  base: '/siselet',
   outDir: 'dist',
   publicDir: 'static',
   integrations: [
     starlight({
-      title: '', // TODO: adicionar titulo
+      title: 'Sistemas eletrônicos',
       logo: {
         src: './src/assets/logos/logo.png'
       },
@@ -22,7 +22,7 @@ export default defineConfig({
       social: [{
         icon: 'github',
         label: 'GitHub',
-        href: '' // TODO: adicionar link repositorio
+        href: 'https://github.com/firelink-library/siselet'
       }],
       plugins: [
         catppuccin({
@@ -31,13 +31,26 @@ export default defineConfig({
         })
       ],
       sidebar: [
-        // TODO: adicionar seções. Ver exemplo abaixo
-        // Para mais opções de config
-        // Acesse: https://starlight.astro.build/guides/sidebar/
         {
-          label: 'Introdução',
-          autogenerate: { directory: 'intro' }, collapsed: true
+          label: 'Eletrônica analógica',
+          autogenerate: { directory: 'anal' }, collapsed: true
         },
+        {
+          label: 'Eletrônica digital',
+          autogenerate: { directory: 'digi' }, collapsed: true
+        },
+        {
+          label: 'Sistemas embarcados',
+          autogenerate: { directory: 'embarc' }, collapsed: true
+        },
+        {
+          label: 'Arquitetura de computadores',
+          autogenerate: { directory: 'arqui' }, collapsed: true
+        },
+        {
+          label: 'Processamento de sinais',
+          autogenerate: { directory: 'sinais' }, collapsed: true
+        }
       ],
     }),
   ],
