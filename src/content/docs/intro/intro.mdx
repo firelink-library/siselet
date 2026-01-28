@@ -1,0 +1,172 @@
+---
+title: Exemplo de Recursos Starlight
+description: Um guia completo mostrando todos os componentes nativos disponíveis em arquivos MDX no Starlight.
+slug: intro
+sidebar:
+  label: Exemplo Completo
+  order: 1
+  badge:
+    text: Demo
+    variant: tip
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: starlight, mdx, docs
+---
+
+import {
+  Aside,
+  Tabs,
+  TabItem,
+  Card,
+  CardGrid,
+  FileTree,
+  Steps,
+  Icon,
+  Badge,
+  LinkButton
+} from '@astrojs/starlight/components';
+
+{/*Você pode definir variáveis JavaScript/TypeScript aqui*/}
+export const versaoAtual = 'v2.0.0';
+
+Bem-vindo à documentação da versão <Badge text={versaoAtual} variant="success" />. Abaixo estão os principais recursos visuais.
+
+---
+
+## 1. Alertas e Avisos (Asides)
+
+O Starlight possui componentes embutidos para destacar informações críticas.
+
+<Aside>
+  Um alerta padrão (nota). Útil para informações gerais.
+</Aside>
+
+<Aside type="tip">
+  **Dica:** Você pode usar Markdown padrão, como **negrito** ou *itálico*, dentro destes blocos.
+</Aside>
+
+<Aside type="caution" title="Atenção Personalizada">
+  Você pode alterar o título padrão do alerta usando a prop `title`.
+</Aside>
+
+<Aside type="danger">
+  Cuidado! Algo crítico pode acontecer aqui.
+</Aside>
+
+---
+
+## 2. Abas (Tabs)
+
+Ótimo para mostrar instruções para diferentes sistemas operacionais ou gerenciadores de pacotes.
+
+<Tabs>
+  <TabItem label="npm" icon="seti:npm">
+    ```bash
+    npm install meu-pacote
+    ```
+  </TabItem>
+  <TabItem label="pnpm" icon="pnpm">
+    ```bash
+    pnpm add meu-pacote
+    ```
+  </TabItem>
+  <TabItem label="yarn" icon="seti:yarn">
+    ```bash
+    yarn add meu-pacote
+    ```
+  </TabItem>
+</Tabs>
+
+---
+
+## 3. Grids e Cartões (Cards)
+
+Use para destacar features ou links de navegação visual.
+
+<CardGrid>
+  <Card title="Recurso Rápido" icon="rocket">
+    O Starlight é extremamente rápido por ser baseado no Astro.
+  </Card>
+  <Card title="Markdown Estendido" icon="document">
+    Suporte total a MDX, permitindo componentes React, Vue, Svelte, etc.
+  </Card>
+</CardGrid>
+
+---
+
+## 4. Estrutura de Arquivos (FileTree)
+
+Visualize a estrutura de pastas do seu projeto sem precisar tirar prints.
+
+<FileTree>
+- public/
+  - favicon.svg
+- src/
+  - content/
+    - docs/
+      - **index.mdx**
+      - guia.md
+  - assets/
+    - logo.png
+- astro.config.mjs
+- package.json
+</FileTree>
+
+---
+
+## 5. Passos (Steps)
+
+Perfeito para tutoriais sequenciais. O Starlight cuida da numeração e do design.
+
+<Steps>
+
+1. **Instale o projeto**
+
+    Execute o comando de inicialização no seu terminal.
+
+2. **Configure o ambiente**
+
+    Edite o arquivo `astro.config.mjs`.
+
+3. **Deploy**
+
+    Envie para produção!
+
+</Steps>
+
+---
+
+## 6. Botões e Ícones
+
+Elementos de UI para chamadas de ação (CTA).
+
+<LinkButton href="/guia/comecando" variant="primary" icon="right-arrow">
+  Começar Agora
+</LinkButton>
+
+<LinkButton href="https://starlight.astro.build" variant="secondary" icon="external">
+  Doc Oficial
+</LinkButton>
+
+---
+
+## 7. Recursos Padrão do Markdown
+
+O MDX suporta todo o markdown padrão que você já conhece:
+
+* **Listas:** Não ordenadas
+* **Links:** [Ir para o Google](https://google.com)
+* **Imagens:** `![Texto alt](/imagem-exemplo.png)`
+* **Tabelas:**
+
+| Recurso | Suportado |
+| :--- | :---: |
+| MDX | ✅ |
+| LaTeX | ✅ |
+| Vue/React | ✅ |
+
+```js
+// Blocos de código com syntax highlighting
+console.log('Olá, Starlight!');
