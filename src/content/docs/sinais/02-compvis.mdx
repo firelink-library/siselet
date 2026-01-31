@@ -13,9 +13,6 @@ Aqui pessoal, vamos avaliar o seguinte problema: temos uma imagem de um processo
 
 É aqui que entram nossos algoritmos de ***visão computacional clássica***! Vamos compreender primeiro o fluxo de operações que vamos realizar e depois vamos implementar cada uma delas beleza?
 
-<img  src={require('/img/compvis/diagrama-compvis.png').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'80%'}} />
-
 Vamos explorar cada um dos quadros desta figura! Primeiro temos a imagem que vai ser captada para dentro do nosso sistema. Observe um ponto importante aqui: a imagem pode ser captada de várias formas, seja por uma câmera, seja por um scanner, seja por um celular, etc. O importante é que a imagem esteja em um formato que o computador consiga ler e processar. Para isso, existem várias bibliotecas disponíveis, como OpenCV, PIL, entre outras.
 
 Depois de captada a imagem, precisamos realizar o seu pré-processamento. Mas o que é isso? O pré-processamento é uma etapa onde aplicamos algumas operações na imagem, como filtros, redimensionamento, normalização, entre outras. O objetivo do pré-processamento é melhorar a qualidade da imagem e facilitar a extração de características relevantes para a classificação.
@@ -62,40 +59,6 @@ mkdir images
 ```
 
 Dentro do diretório `images`, vamos colocar as imagens que vamos utilizar para o projeto. Para isso, vou deixar as imagens aqui para vocês:
-
-<img  src={require('/img/compvis/tampinhas_01.jpeg').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'60%'}} />
-<br />
-<img  src={require('/img/compvis/tampinhas_02.jpeg').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'60%'}} />
-<br />
-<img  src={require('/img/compvis/tampinhas_03.jpeg').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'60%'}} />
-<br />
-<img  src={require('/img/compvis/tampinhas_04.jpeg').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'60%'}} />
-<br />
-<img  src={require('/img/compvis/tampinhas_05.jpeg').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'60%'}} />
-<br />
-<img  src={require('/img/compvis/tampinhas_06.jpeg').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'60%'}} />
-<br />
-<img  src={require('/img/compvis/tampinhas_07.jpeg').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'60%'}} />
-<br />
-<img  src={require('/img/compvis/tampinhas_08.jpeg').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'60%'}} />
-<br />
-<img  src={require('/img/compvis/tampinhas_09.jpeg').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'60%'}} />
-<br />
-<img  src={require('/img/compvis/tampinhas_10.jpeg').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'60%'}} />
-<br />
-<img  src={require('/img/compvis/tampinhas_11.jpeg').default} alt="Diagrama Visão Computacional Clássica"
-style={{marginLeft:'auto', marginRight:'auto', display:'block', width:'60%'}} />
-<br />
 
 ## 2. Etapa de Pré-processamento
 

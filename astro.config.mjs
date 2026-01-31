@@ -2,9 +2,15 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import catppuccin from '@catppuccin/starlight';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 // https://astro.build/config
 export default defineConfig({
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
+  },
   site: 'https://firelink-library.github.io',
   base: '/siselet',
   outDir: 'dist',
