@@ -5,6 +5,22 @@ sidebar:
     order: 3
 ---
 
+import { Image } from 'astro:assets';
+import portalCake from '../../../assets/arqui/paradigmas/portal_cake.jpg';
+import vonNeumann from '../../../assets/arqui/paradigmas/von_neumann.jpg';
+import moore from '../../../assets/arqui/paradigmas/moore.png';
+import griffith from '../../../assets/arqui/paradigmas/griffith.jpg';
+import mooreDead from '../../../assets/arqui/paradigmas/moore_dead.jpg';
+import a64x2 from '../../../assets/arqui/paradigmas/a64x2.jpg';
+import pentiumD from '../../../assets/arqui/paradigmas/pentium_d.jpg';
+import sisd from '../../../assets/arqui/paradigmas/sisd.png';
+import simd from '../../../assets/arqui/paradigmas/simd.png';
+import misd from '../../../assets/arqui/paradigmas/misd.png';
+import mimd from '../../../assets/arqui/paradigmas/mimd.png';
+import memory from '../../../assets/arqui/paradigmas/memory.jpeg';
+import umanuma from '../../../assets/arqui/paradigmas/umanuma.png';
+
+
 Na seção antrior estabelecemos que, após a construção do ENIAC, começamos uma
 era da computação em que os avanços eram exponenciais. Se você fizer um recorte
 de cada uma das décadas desde os anos 40 até os anos 2020, a computação vai ter
@@ -30,18 +46,14 @@ você não esbarrou em uma das limitações da programação sequencial, in loco
 um único núcleo, então deveria ficar onde está. É fácil, sem confusão e tem
 bolo.
 
-<img
-  src="<https://bitismyth.wordpress.com/wp-content/uploads/2012/07/portal-cake.png>"
-  alt="Bolo"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '30vh',
-    marginRight: 'auto'
-  }}
+<center>
+<Image
+    src={portalCake}
+    alt="O bolo"
+    style={{ height: '20%', height: 'auto' }}
 />
-<br/>
-<p><center>Fig 2.01 - O bolo.</center></p>
+</center>
+<p><center>O bolo.</center></p>
 
 Eu disse que a seção *pode* começar e acabar bem rápido, não que *vai*. Vou
 aproveitar aqui para contar um pouco mais de história, afinal esse paradigma é
@@ -103,17 +115,13 @@ o padrão para aqueles que queriam explorar os novos computadores dos anos 60,
 que já utilizavam quase exclusivamente o que hoje conhecemos como **arquitetura
 de von neumann**.
 
-<img
-  src="<https://computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram.jpg>"
-  alt="Von Neumann arch"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '50vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
+<center>
+  <Image
+    src={vonNeumann}
+    alt="Arquitetura de von Neumann"
+    style={{ height: 'auto' }}
+  />
+</center>
 <p><center>Fig 2.02 - John Von Neumann foi um dos cientistas da computação mais
 famosos e influentes da história. Muitos dos conceitos que hoje são
 fundamentais para a computação moderna surgiram de definições propostas por
@@ -125,18 +133,15 @@ artigo de 1965, *Cramming more components onto integrated circuits*. Moore
 notou que havia uma tendência em que a densidade de transistores em
 processadores dobrava a cada 1.5 anos.
 
-<img
-  src="<https://www.tf.uni-kiel.de/matwis/amat/semitech_en/kap_5/illustr/moore_law.png>"
-  alt="Lei de Moore"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '40vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.03 - A Lei de Moore no mundo real, com processadore da
+<center>
+  <Image
+    src={moore}
+    alt="Lei de Moore"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Image Caption</center></p>
+<p><center>A Lei de Moore no mundo real, com processadore da
 *Intel*. Décadas após a observação de Gordon Moore, o mundo continuava vendo o
 crescimento exponencial de densidade de transistores. Até que...</center></p>
 
@@ -152,18 +157,13 @@ computação.
 
 Todos sabemos como termina a era de ouro, certo?
 
-<img
-  src="<https://i.pinimg.com/736x/39/78/d8/3978d8389d879d2b78c914f4e049c1dc.jpg>"
-  alt="I sacrifice"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '30vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.04 - I sacrifice.</center></p>
+<center>
+  <Image
+    src={griffith}
+    alt="I sacrifice"
+    style={{ height: 'auto' }}
+  />
+</center>
 
 ## 2. Computação paralela
 
@@ -176,18 +176,14 @@ frase realmente ganhou tração foi no começo dos anos 2000 (detalhe inútil: e
 já estava usando/montando computadores nessa época com meus 10 anos de idade e
 meus 13 disquetes para instalar o Windows 95 =D).
 
-<img
-  src="<https://media.licdn.com/dms/image/D5622AQGklQBRU3EyAA/feedshare-shrink_800/0/1708009270479?e=2147483647&v=beta&t=j9tnEopwWM3pi3DHiQdD6nFJc431ooMxkzK96tbBT7U>"
-  alt="Moore's Law is Dead"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '70vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.05 - O fim da Lei de Moore "acontecendo" em vários momentos da
+<center>
+  <Image
+    src={mooreDead}
+    alt="A lei de moore está morat"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>O fim da Lei de Moore "acontecendo" em vários momentos da
 história.</center></p>
 
 De fato parecia que finalmente o ritmo frenético de evolução das CPUs iria
@@ -215,36 +211,28 @@ tinham acesso a uma memória de alta performance para a comunicação entre os
 dois núcleos. Essa memória ficava logo após o cache L2. A imagem abaixo exibe
 de forma simplificada essa escolha de arquitetura da AMD.
 
-<img
-  src="<https://www.hardware.com.br/static/books/hardware/cap2-31_html_m49239a8f.png>"
-  alt="Cache L3 baby"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '50vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.06 - Arquitetura simplificada do lendário Atlhon 64 x2, chip
+<center>
+  <Image
+    src={a64x2}
+    alt="Atlhon 64 x2"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Arquitetura simplificada do lendário Atlhon 64 x2, chip
 fabricado pela AMD.</center></p>
 
 Enquanto isso, a Intel contava com um Bus de relativa baixa performance para a
 comunicação entre dois núcleos totalmente separados. A imagem abaixo
 exemplifica essa escolha.
 
-<img
-  src="<https://img.hexus.net/v2/processors/intel/lga775/840XE/Block.jpg>"
-  alt="Intel Pentium D"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '70vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.07 - Enquanto isso, no lado azul tinhamos o Pentium D. Esse
+<center>
+  <Image
+    src={pentiumD}
+    alt="Pentium D"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Enquanto isso, no lado azul tinhamos o Pentium D. Esse
 chip era o mais próximo possível de simplesmente dois Pentium 4 colocados um em
 cima do outro. O problema? O Pentium 4 já era notóriamente **quente**. Com 130W
 de TDP, o Pentium D era uma boa alternativa para as casas norte americanas sem
@@ -320,18 +308,14 @@ Foi uma pergunta retórica. Vamos.
 
 **Single instruction, single data (SISD)**
 
-<img
-  src="<https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/SISD.svg/1024px-SISD.svg.png>"
-  alt="SISD"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '27vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.08 - Uma arquitetura SISD é marcada por ter apenas um conjunto
+<center>
+  <Image
+    src={sisd}
+    alt="SISD"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Uma arquitetura SISD é marcada por ter apenas um conjunto
 de instruções para serem executadas em apenas um fluxo de entrada de
 dados.</center></p>
 
@@ -354,18 +338,14 @@ computacional/dispositivo que exemplifica esse tipo de arquitetura.
 
 **Single instruction, multiple data (SIMD)**
 
-<img
-  src="<https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/SIMD2.svg/220px-SIMD2.svg.png>"
-  alt="SIMD"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '70vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.09 - A arquitetura SIMD é marcada por continuar com um único
+<center>
+  <Image
+    src={simd}
+    alt="Description of image"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>A arquitetura SIMD é marcada por continuar com um único
 fluxo de instruções, mas agora contamos com múltiplos fluxo de
 dados.</center></p>
 
@@ -385,18 +365,14 @@ cite uma aplicação que se beneficia amplamente deste tipo de arquitetura.
 
 **Multiple instruction, single data (MISD)**
 
-<img
-  src="<https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/MISD.svg/1024px-MISD.svg.png>"
-  alt="MISD"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '25vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.10 - A arquitetura MISD é menos usual. Nela, há apenas um
+<center>
+  <Image
+    src={misd}
+    alt="Description of image"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>A arquitetura MISD é menos usual. Nela, há apenas um
 fluxo de dados para múltiplos fluxos de instruções.</center></p>
 
 O MISD é um pokémon mais difícil de encontrar em campo. Tesmo apenas uma
@@ -414,18 +390,14 @@ vantajosa? Cite exemplos.
 
 **Multiple instruction, multiple data (MIMD)**
 
-<img
-  src="<https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/MIMD.svg/1024px-MIMD.svg.png>"
-  alt="MIMD"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '25vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.11 - A arquitetura MIMD é a mais versátil, mas também a mais
+<center>
+  <Image
+    src={mimd}
+    alt="Description of image"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>A arquitetura MIMD é a mais versátil, mas também a mais
 complexa para se trabalhar. Nela, temos múltiplos fluxos de dados e também
 múltiplas unidades computacionais com capacidade de executar instruções
 heterogêneas.</center></p>
@@ -473,18 +445,14 @@ unidades computacionais acessam o mesmo recurso de memória ou a memória é
 distribuída, sem que as unidades computacionais consigam acessar os mesmos
 engereços.
 
-<img
-  src="<https://ars.els-cdn.com/content/image/1-s2.0-B9780124080898000033-f03-04-9780124080898.jpg>"
-  alt="Memória compartilhada vs memória distribuída"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '50vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.12 - Em a), temos um sistema cuja memória é compartilhada.
+<center>
+  <Image
+    src={memory}
+    alt="Description of image"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Em a), temos um sistema cuja memória é compartilhada.
 Isso significa que todas as unidades computacionais acessam o mesmo recurso de
 memória. Em b), temos um sistema com memória distribuída. Isso significa que há
 unidades computacionais que não conseguem acessar os mesmos endereços de
@@ -512,18 +480,15 @@ complexo lidar com essa falta de uniformidade. No entanto, o custo atrelado à
 escalabilidade de um sistema puramente uniforme é proibitivo. Fazemos o melhor
 com aquilo que temos.
 
-<img
-  src="<https://www.researchgate.net/publication/309652802/figure/fig7/AS:669409957904393@1536611179704/Uniform-left-vs-non-uniform-right-memory-access-models.png>"
-  alt="Distributed memory system"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '30vh',
-    marginRight: 'auto'
-  }}
-/>
+<center>
+  <Image
+    src={umanuma}
+    alt="Description of image"
+    style={{ height: 'auto' }}
+  />
+</center>
 <br/>
-<p><center>Fig 2.13 - À esquerda, temos um sistema cujo acesso à memória é
+<p><center>À esquerda, temos um sistema cujo acesso à memória é
 uniforme. Isso significa que ou todas as unidades computacionais vão ter acesso
 compartilhado à memória ou todas as unidades computacionais vão ter acesso à
 sua própria memória. Já à direita, temos um exemplo de acesso não-uniforme. O
@@ -582,21 +547,6 @@ são aqueles dispositivos que já tem o arquivo completo e estão servindo os
 arquivos para os *leechers*, ou sanguessugas (essa tradução fica um tanto feia
 no português =O).
 
-<img
-  src="<https://www.gta.ufrj.br/ensino/eel878/redes1-2018-1/trabalhos-v1/p2p/images/p2p_model.png>"
-  alt="Distributed memory system"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '30vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.14 - O modelo peer-to-peer é marcado por ser uma rede de
-computadores resolvendo um mesmo problema, mas sem um nó gerenciador. Todos os
-nós são iguais e contribuem para a computação.</center></p>
-
 Usando a analogia com o sistema de *torrent*, podemos concluir que o modelo de
 computação peer-to-peer (P2P) caracteriza-se pela ausência de um servidor
 central, com cada nó na rede funcionando simultaneamente como cliente
@@ -616,21 +566,6 @@ dia).
 :::
 
 ### 3.2. Clusters
-
-<img
-  src="<https://media.geeksforgeeks.org/wp-content/uploads/20210313225739/UntitledDiagram4.png>"
-  alt="Clusters"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '30vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 2.15 - Um cluster de computadores se caracteriza por ser uma
-estrutura mais organizada, com um computador raíz (*root*) que gerencia o
-serviço que envia a outros computadores dentro do cluster.</center></p>
 
 Clusters são conjuntos de computadores interconectados que trabalham em
 conjunto para atuar como um único sistema coeso. Cada nó de um cluster possui

@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightSidebarTopics from 'starlight-sidebar-topics'
 import catppuccin from '@catppuccin/starlight';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -36,27 +37,53 @@ export default defineConfig({
           light: { flavor: "latte", accent: "mauve" }
         })
       ],
-      sidebar: [
-        {
-          label: 'Eletrônica analógica',
-          autogenerate: { directory: 'anal' }, collapsed: true
-        },
-        {
-          label: 'Eletrônica digital',
-          autogenerate: { directory: 'digi' }, collapsed: true
-        },
-        {
-          label: 'Sistemas embarcados',
-          autogenerate: { directory: 'embarc' }, collapsed: true
-        },
-        {
-          label: 'Arquitetura de computadores',
-          autogenerate: { directory: 'arqui' }, collapsed: true
-        },
-        {
-          label: 'Processamento de sinais',
-          autogenerate: { directory: 'sinais' }, collapsed: true
-        }
+      plugins: [
+        starlightSidebarTopics([
+          {
+            label: 'Eletrônica analógica',
+            link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            icon: 'open-book',
+          },
+          {
+            label: 'Eletrônica digital',
+            id: 'digi',
+            icon: 'open-book',
+            link: '/transistor',
+            items: [
+              {
+                label: "Conteúdo",
+                autogenerate: { directory: 'digi' }, collapsed: true
+              }
+            ],
+          },
+          {
+            label: 'Arquitetura de computadores',
+            icon: 'open-book',
+            link: '/historia-comp',
+            items: [
+              {
+                label: "Conteúdo",
+                autogenerate: { directory: 'arqui' }, collapsed: true
+              }
+            ],
+          },
+          {
+            label: 'Sistemas embarcados',
+            link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            icon: 'open-book',
+          },
+          {
+            label: 'Processamento de sinais',
+            icon: 'open-book',
+            link: '/sinais-imagem',
+            items: [
+              {
+                label: "Conteúdo",
+                autogenerate: { directory: 'sinais' }, collapsed: true
+              }
+            ],
+          },
+        ]),
       ],
     }),
   ],
