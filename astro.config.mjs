@@ -35,19 +35,17 @@ export default defineConfig({
         catppuccin({
           dark: { flavor: "macchiato", accent: "mauve" },
           light: { flavor: "latte", accent: "mauve" }
-        })
-      ],
-      plugins: [
+        }),
         starlightSidebarTopics([
           {
             label: 'Eletrônica analógica',
             link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-            icon: 'open-book',
+            icon: 'setting',
           },
           {
             label: 'Eletrônica digital',
             id: 'digi',
-            icon: 'open-book',
+            icon: 'matrix',
             link: '/transistor',
             items: [
               {
@@ -58,7 +56,7 @@ export default defineConfig({
           },
           {
             label: 'Arquitetura de computadores',
-            icon: 'open-book',
+            icon: 'laptop',
             link: '/historia-comp',
             items: [
               {
@@ -70,11 +68,11 @@ export default defineConfig({
           {
             label: 'Sistemas embarcados',
             link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-            icon: 'open-book',
+            icon: 'puzzle',
           },
           {
             label: 'Processamento de sinais',
-            icon: 'open-book',
+            icon: 'magnifier',
             link: '/sinais-imagem',
             items: [
               {

@@ -5,6 +5,23 @@ sidebar:
 slug: transistor
 ---
 
+import { Image } from 'astro:assets';
+import dopagemSilicio from '../../../assets/digi/transistor/dopagem_silicio.png';
+import juncaoPn from '../../../assets/digi/transistor/juncao_pn.png';
+import polarizacaoDiodo from '../../../assets/digi/transistor/polarizacao_diodo.gif';
+import polarizacaoReversa from '../../../assets/digi/transistor/diodo_polarizacao_reversa.gif';
+import diodo from '../../../assets/digi/transistor/diodo.jpg';
+import transistorBjt from '../../../assets/digi/transistor/transistor_bjt.png';
+import transistorNpn from '../../../assets/digi/transistor/transistor_npn.jpg';
+import fluxoBjt from '../../../assets/digi/transistor/fluxo_bjt.jpg';
+import fluxoNpn from '../../../assets/digi/transistor/fluxo_npn.jpg';
+import mosfet from '../../../assets/digi/transistor/mosfet.jpg';
+import mosfetInterno from '../../../assets/digi/transistor/mosfet_interno.jpg';
+import capacitor from '../../../assets/digi/transistor/capacitor.webp';
+import capacitorCarregando from '../../../assets/digi/transistor/capacitor_carregando.png';
+import mosCapacitor from '../../../assets/digi/transistor/mos_capacitor.png';
+import mosfetN from '../../../assets/digi/transistor/mosfet_n.webp';
+
 Vamos voltar um pouco no tempo, para 1947. Estamos nos Estados Unidos, no Bell
 Laboratories, em Nova Jersey. Foi lá que um grupo de cientistas fez uma
 descoberta que abriu os mares para a computação digital. Estamos falando da
@@ -47,18 +64,14 @@ eletricidade. Esse controle sobre a condutividade é essencial para o
 funcionamento dos transistores, permitindo que eles atuem como chaves ou
 amplificadores em circuitos eletrônicos.
 
-<img
-  src="<https://www.researchgate.net/publication/332530564/figure/fig2/AS:749477560348679@1555700783530/Example-of-doping-in-Silicon-a-intrinsic-Silicon-giving-rise-to-intrinsic-carrier.png>"
-  alt="Dopagem de silício"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '60vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.01 - O processo de dopagem do silício. Em a), temos o silício
+<center>
+  <Image
+    src={dopagemSilicio}
+    alt="Dopagem de silício"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>O processo de dopagem do silício. Em a), temos o silício
 "puro". Nessa configuração, ele age como um isolante. Em b), temos silício com
 dopagem com átomos fósforo, criando um semicondutor *tipo n*. Por fim, em c)
 temos uma dopagem com átomos de Boro, criando um semicondutor *tipo
@@ -66,12 +79,12 @@ p*.</center></p>
 
 Até hoje eu não vi um recurso tão bom para explicar como funcionam os materiais
 semicondutores especificamente para a criação de diodos do que o vídeo do
-Veritasium em que ele conta a história e importância do *led azul*.
+Veritasium em que ele conta a história e a importância do *LED azul*.
 
 :::note[Autoestudo obrigatório]
 
 O trecho relevante começa em 3:49 e vai até 9:20, mas o vídeo é fantástico. Se
-tiver meia horinha sobrando aí, assita ele inteiro!
+tiver meia horinha sobrando aí, assista ele inteiro!
 
 <div style={{ textAlign: 'center' }}>
     <iframe
@@ -105,21 +118,23 @@ Então, qual é a diferença? A diferença está na polaridade dos portadores de
 carga. Essa distinção pode parecer irrelevante até que combinamos um
 semicondutor tipo n com um tipo p, momento em que a mágica acontece.
 
-<img
-  src="<https://cdn1.byjus.com/wp-content/uploads/2020/01/unbiased-P-N-junction.png>"
-  alt="Junção pn"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '60vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.02 - A junção pn ocorre quando um semicondutor do tipo n e um
+<center>
+  <Image
+    src={juncaoPn}
+    alt="Junção pn"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>A junção pn ocorre quando um semicondutor do tipo n e um
 do tipo p são colocados em contato um com o outro. Quando isso acontece, temos
     uma situação em que a polaridade no geral tende à neutralidade e gera-se
     uma *zona de depleção*.</center></p>
+
+:::note[Conceito Chave: Zona de Depleção]
+
+A **zona de depleção** (ou região de depleção) é uma camada isolante que se forma na junção entre os materiais P e N. Nela, os portadores de carga se recombinam e "somem", criando uma barreira que impede a passagem de corrente a menos que uma tensão externa seja aplicada para vencê-la.
+
+:::
 
 Quando os "buracos" (cargas positivas) encontram os elétrons livres (cargas
 negativas) na junção pn, ocorre uma neutralização das cargas, criando uma zona
@@ -132,18 +147,14 @@ direta. Nesse cenário, a diferença de potencial reduz a zona de depleção.
 Quando essa zona desaparece, a junção pn permite a passagem de corrente
 elétrica, funcionando como um condutor.
 
-<img
-  src="<https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxXlMiF9EZmT55ODF__uVaTgrgaOp7JGrCgh3OVYUtsfaa676h2ylJt6z6nbASUJVmwaodmgGAewQpTHu_53BbYog8hLUdHupc6DFgnXXCMOTSdOYTSG-LQ8H5QdnBLfDQy_xaP3nqwYk/s1600/pndiode.gif>"
-  alt="Polarização direta"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '20vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.03 - Polarização direta de uma junção PN. A região de depleção
+<center>
+  <Image
+    src={polarizacaoDiodo}
+    alt="Polarização direta"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Polarização direta de uma junção PN. A região de depleção
 diminui até deixar de existir.</center></p>
 
 Por outro lado, se a tensão positiva for aplicada ao lado do tipo n, a zona de
@@ -151,32 +162,24 @@ depleção aumenta. Nesse caso, o material continua a se comportar como um
 isolante. Senhoras e senhores, chegamos ao diodo, um componente que permite a
 passagem de corrente apenas em um sentido.
 
-<img
-  src="<https://circuitdigest.com/sites/default/files/inlineimages/u/Diode-Reverse-biased-working.gif>"
-  alt="Polarização reversa"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '90vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.04 - Polarização reversa de junção pn. A região de depleção
+<center>
+  <Image
+    src={polarizacaoReversa}
+    alt="Polarização reversa"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Polarização reversa de junção pn. A região de depleção
 aumenta.</center></p>
 
-<img
-  src="<https://www.usinainfo.com.br/img/cms/fotos-categorias/simbolo-do-diodo.jpg>"
-  alt="O diodo"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '30vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.05 - O diodo é um componente que permite a passagem de
+<center>
+  <Image
+    src={diodo}
+    alt="O diodo"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>O diodo é um componente que permite a passagem de
 corrente elétrica apenas do ânodo em direção ao cátodo.</center></p>
 
 :::tip[Exercício 4.01]
@@ -198,23 +201,19 @@ de tensão/corrente.
 
 ### 2.1. Transistor de junção bipolar
 
-<img
-  src="<https://www.allaboutelectronics.org/wp-content/uploads/2020/04/BJT_WB_1.png>"
-  alt="npn BJT"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '30vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.06 - O transistor de junção bipolar npn tem três zonas de
-material semicondutor, sendo uma tipo p sanduíchada entre duas regiões tipo
+<center>
+  <Image
+    src={transistorBjt}
+    alt="npn BJT"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>O transistor de junção bipolar npn tem três zonas de
+material semicondutor, sendo uma tipo p sanduichada entre duas regiões tipo
 n.</center></p>
 
-A resposta? Adicionar três zonas polarizadas, o que faz com que exista duas
-zonas de depleção. Aqui, vale à pena também falar sobre a nomenclatura das três
+A resposta? Adicionar três zonas polarizadas, o que faz com que existam duas
+zonas de depleção. Aqui, vale a pena também falar sobre a nomenclatura das três
 entradas de um transistor bjt:
 
 * A base (B) é onde entra o sinal utilizado como *chave* para fazer com que o
@@ -222,24 +221,27 @@ entradas de um transistor bjt:
 * O coletor (C) é onde tipicamente conecta-se uma fonte de tensão de alta
   potência. Quando o transistor está em condução, a corrente elétrica corre do
   coletor para;
-* O emissor (B), que tipicamente é conectado ao restante do circuito (assumindo
+* O emissor (E), que tipicamente é conectado ao restante do circuito (assumindo
   o uso de um transistor como amplificador).
 
-Para entender como o transistor BJT npn funciona é conveniente represetar as
+:::tip[Analogia da Torneira]
+Para facilitar, imagine o BJT como uma torneira de jardim:
+* O **Coletor** é a mangueira onde a água (corrente) está esperando para sair.
+* O **Emissor** é o bocal por onde a água sai.
+* A **Base** é o registro. Se você girar só um pouquinho o registro (pequena corrente na base), sai um fluxo muito maior de água pelo bocal (corrente amplificada no coletor). Se fechar o registro, a água para de correr (corte).
+:::
+
+Para entender como o transistor BJT npn funciona é conveniente representar as
 duas junções como diodos, como na figura abaixo.
 
-<img
-  src="<https://www.circuitcrush.com/wp-content/uploads/Transistors-as-Diodes-600x338.jpg>"
-  alt="npn BJT como diodos"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '30vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.07 - Transistor npn BJT com suas regiões bipolares como
+<center>
+  <Image
+    src={transistorNpn}
+    alt="npn BJT como diodos"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Transistor npn BJT com suas regiões bipolares como
 diodos.</center></p>
 
 Se aplicarmos uma tensão positiva na direção CE, nada acontece, pois as regiões
@@ -258,41 +260,44 @@ faz com que alguns poucos elétrons passem pela base, mas a esmagadora maioria
 se move de acordo com a tensão aplicada em CE e vai em direção ao pólo
 positivo, no coletor. A imagem abaixo mostra esse fluxo de elétrons.
 
-<img
-  src="<https://www.circuitcrush.com/wp-content/uploads/How-BJT-Works.jpg>"
-  alt="Fluxo de elétrons em um transistor npn"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '30vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.08 - Fluxo de elétrons em um transistor npn em região de
+<center>
+  <Image
+    src={fluxoBjt}
+    alt="Fluxo de elétrons em um transistor npn"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Fluxo de elétrons em um transistor npn em região de
 condução. Note que esse diagrama não mostra o fluxo de corrente elétrica, mas
 sim o fluxo de elétrons.</center></p>
 
 O efeito disso é que a base fica praticamente isolada do circuito de
 *potência*, que tem fluxo de corrente de C para E. Essa característica garante
 que o transistor consegue funcionar como um **amplificador** e também como uma
-**chave** eletrônicamente controlada.
+**chave** eletronicamente controlada.
+
+No modo amplificador, a relação entre a corrente que entra na base ($I_B$) e a corrente que flui pelo coletor ($I_C$) é definida pelo ganho do transistor ($\beta$ ou $h_{FE}$):
+
+$$I_C = \beta \cdot I_B$$
+
+Isso significa que uma corrente minúscula na base pode controlar uma corrente muito maior no coletor!
+
+| Estado | Chave | Corrente de Base ($I_B$) | Corrente de Coletor ($I_C$) | Tensão Coletor-Emissor ($V_{CE}$) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Corte** | Aberta (OFF) | Zero ou negativa | Zero | Máxima (igual a $V_{CC}$) |
+| **Saturação** | Fechada (ON) | Alta o suficiente | Máxima (limitada pela carga) | Mínima ($\approx 0,2V$) |
 
 O último detalhe do transistor BJT que vou deixar aqui é a maneira como ele de
 fato se parece.
 
-<img
-  src="<https://www.circuitcrush.com/wp-content/uploads/BJT-Cross-Section.jpg>"
-  alt="Fluxo de elétrons em um transistor npn"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '60vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.09 - Vista de seção de um transistor BJT npn.</center></p>
+<center>
+  <Image
+    src={fluxoNpn}
+    alt="Fluxo de elétrons em um transistor npn"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Vista de seção de um transistor BJT npn.</center></p>
 
 :::tip[Exercício 4.02]
 
@@ -328,7 +333,7 @@ transistores BJT.
 Por mais que o transistor BJT faça *tudo* melhor e *menor* que o tubo de vácuo,
 não é ele que existe no dispositivo que você está usando para ler esse texto
 agora. Essa honra fica para um outro tipo de transistor, o **Transistor de
-efeito de campo de metal-oxido-semicondutor**, ou **MOSFET**.
+efeito de campo de metal-óxido-semicondutor**, ou **MOSFET**.
 
 Baita nome, né? É... Você não entendeu quase nenhuma dessas palavras, né?
 Relaxa, você não está sozinho. Vamos juntos que eu te explico o que está por
@@ -337,21 +342,17 @@ trás desse nome assustador.
 Vamos começar pela parte fácil? O símbolo e os terminais do MOSFET são um
 pouquinho diferentes do transistor BJT, vamos ver:
 
-<img
-  src="<https://www.lesics.com/Working-of-Transistors/mosfet.jpg>"
-  alt="MOSFET"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '30vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.10 - Um MOSFET *tipo n*.</center></p>
+<center>
+  <Image
+    src={mosfet}
+    alt="MOSFET"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Um MOSFET *tipo n*.</center></p>
 
 Enquanto o BJT tinha *Base*, *Coletor* e *Emissor*, o MOSFET tem *Gate*,
-*Drain* e *Source*. Há uma equilavência funcional entre essas portas:
+*Drain* e *Source*. Há uma equivalência funcional entre essas portas:
 
 * *Base* - *Gate*
 * *Coletor* - *Source*
@@ -361,27 +362,23 @@ O transistor representado acima é um MOSFET *tipo n*. Assim como o BJT tem
 configurações *pnp* e *npn*, o MOSFET tem configurações *tipo n* e *tipo p*.
 Sim, eu vou te perguntar sobre isso mais tarde.
 
-Do ponto de vista de dopagem, o MOSFET é como se aplicassemos seletivamente
+Do ponto de vista de dopagem, o MOSFET é como se aplicássemos seletivamente
 zonas de dopagem distintas em uma mesma "pastilha" (em inglês, *wafer*) de
 silício.
 
-<img
-  src="<https://www.mks.com/mam/celum/celum_assets/Figure_11-Semiconductor_Handbook_800w.jpg>"
-  alt="MOSFET por dentro"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '60vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.11 - O MOSFET por dentro. Há uma região principal, do qual o
+<center>
+  <Image
+    src={mosfetInterno}
+    alt="MOSFET por dentro"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>O MOSFET por dentro. Há uma região principal, da qual o
 *wafer* é feito. As regiões do *source* e do *drain* são feitas com uma dopagem
 diferente da região principal. Por fim, o terminal do *gate* é separado do
 semicondutor por um óxido isolante.</center></p>
 
-Se aplicarmos uma tensão no sentido de DS (*Drain - Switch*), assim como no
+Se aplicarmos uma tensão no sentido de DS (*Drain - Source*), assim como no
 caso da tensão CE no BJT, as zonas de depleção só vão aumentar e o transistor
 não conduz. No transistor BJT, resolvemos isso aplicando uma tensão positiva na
 *Base*. O problema é que o *Gate* do MOSFET está separado do semicondutor por
@@ -394,18 +391,14 @@ Um capacitor é um dos componentes eletrônicos mais simples que existem. A idei
 por trás dele é separar dois condutores utilizando um material isolante. Um
 capacitor eletrolítico tipicamente vai ter a configuração vista abaixo:
 
-<img
-  src="<https://dwma4bz18k1bd.cloudfront.net/tutorials/_1024x448_crop_center-center_82_line/electrolytic-capacitor-internal.jpg.webp>"
-  alt="O capacitor por dentro"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '20vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.12 - Um capacitor eletrolítico tipicamente é um enrolamento de
+<center>
+  <Image
+    src={capacitor}
+    alt="O capacitor por dentro"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Um capacitor eletrolítico tipicamente é um enrolamento de
 chapas metálicas separadas por um material isolante. As chapas recebem cargas
 opostas durante o funcionamento do circuito.</center></p>
 
@@ -417,19 +410,14 @@ descarregada assim que desligamos a fonte de alimentação. É por isso que o
 capacitor pode servir como um *acumulador*, que *atrasa* a resposta dinâmica do
 sistema. A imagem abaixo representa esse comportamento.
 
-<img
-  src="<https://www.physics-and-radio-electronics.com/electronic-devices-and-circuits/passive-components/capacitors/images/capacitorcharging.png>"
-  alt="Circuito c/ capacitor"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '40vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.13 - Um capacitor quando alimentado por uma fonte de
-tensão.</center></p>
+<center>
+  <Image
+    src={capacitorCarregando}
+    alt="Circuito c/ capacitor"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Um capacitor quando alimentado por uma fonte de tensão.</center></p>
 
 A parte interessante para nós acontece justamente no acúmulo de carga. Note que
 a imagem acima mostra *elétrons livres* e *buracos*. Onde mais você viu isso?
@@ -439,50 +427,42 @@ Beleza, mas e daí? O que isso tem a ver com o MOSFET? Eu vou deixar só mais um
 imagem abaixo de um tipo específico de capacitor que existe e fica como um
 exercício extraoficial você tentar entender qual a relação com o MOSFET.
 
-<img
-  src="<https://h-gens.github.io/images/2015-02-25-MOSCAP-derivations/mos_cross_section.png>"
-  alt="Capacitor MOS"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '40vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.14 - O capacitor MOS (metal-oxido-semicondutor) é uma
+<center>
+  <Image
+    src={mosCapacitor}
+    alt="Capacitor MOS"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>O capacitor MOS (metal-óxido-semicondutor) é uma
 configuração possível de um capacitor. Substitui-se uma das placas de metal por
 material semicondutor.</center></p>
 
 **Cria-se um canal**
 
-Vamos considerar o caso do MOSFET *tipo p* e novamente aplicar uma tensão no
+Vamos considerar o caso do MOSFET *tipo n* e novamente aplicar uma tensão no
 sentido DS, só que agora também uma tensão positiva em G. O que ocorre de fato
 é que o efeito de campo do capacitor MOS formado entre o Gate e o substrato
-*tipo p* faz com que os buracos do substrato sejam preenchidos e crie-se uma
+*tipo p* faz com que os buracos do substrato sejam repelidos e crie-se uma
 nova zona de depleção e, dentro dela, um canal que efetivamente conecta as
-zonas de depleção de D e S, permitindo a movimentação dos elétrons. Assim, o
+regiões de *source* e *drain*, permitindo a movimentação dos elétrons. Assim, o
 MOSFET conduz.
 
-<img
-  src="<https://www.researchgate.net/publication/325298919/figure/fig2/AS:631344749096962@1527535726900/An-example-of-a-n-channel-MOSFET-transistor-a-for-a-0V-gate-bias-and-b-positive.png>"
-  alt="MOSFET com canal"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '40vh',
-    marginRight: 'auto'
-  }}
-/>
-<br/>
-<p><center>Fig 4.15 - Um MOSFET tipo p, quando recebe tensão positiva em seu
+<center>
+  <Image
+    src={mosfetN}
+    alt="MOSFET com canal"
+    style={{ height: 'auto' }}
+  />
+</center>
+<p><center>Um MOSFET tipo n, quando recebe tensão positiva em seu
 *gate*, gera um canal por onde é possível passar corrente entre o *drain* e o
 *source*</center></p>
 
 :::tip[Exercício 4.03]
 
-É. Chegou a hora. Eu mostrei o MOSFET *tipo p* para vocês. Qual é a diferença
-na prática de um *tipo p* para um *tipo n*. Muda alguma coisa na maneira como
+É. Chegou a hora. Eu mostrei o MOSFET *tipo n* para vocês. Qual é a diferença
+na prática de um *tipo n* para um *tipo p*? Muda alguma coisa na maneira como
 devo usá-lo?
 
 Além disso. Nós vimos no exemplo acima um tipo de MOSFET chamado de *depletion
@@ -512,14 +492,14 @@ formato textual, segue um vídeo que aborda os mesmos conceitos:
 
 :::
 
-Beleza, mas por quê usar um componente com um comportamento tão mais complexo
+Beleza, mas por que usar um componente com um comportamento tão mais complexo
 que o bom e velho transistor BJT? Há algumas vantagens do MOSFET sobre o BJT,
 as duas principais são:
 
 * A *impedância* entre a entrada e o circuito de potência do MOSFET é **muito**
   alta. Isso significa um isolamento maior entre o circuito de lógica e o
   circuito de potência quando usamos o MOSFET como um amplificador
-  (praticamente todas as pontes H modernas usam MOSFETS).
+  (praticamente todas as pontes H modernas usam MOSFETs).
 * Se você prestou bastante atenção na explicação acima, pode ter percebido que
   o MOSFET tem um método de fabricação que parte de uma "chapa" de silício puro
   e, só fazendo adições a esse material (ou, deposições), conseguimos criar
@@ -554,6 +534,10 @@ serve. Qual a relação do MOSFET com a ponte H?
 :::
 
 ## 3. Portas lógicas com transistores
+
+Antes de vermos as portas lógicas, precisamos falar sobre a tecnologia **CMOS** (*Complementary Metal-Oxide-Semiconductor*). Como o nome sugere, ela é "complementar" porque utiliza pares de transistores **NMOS** (que ligam com nível lógico alto) e **PMOS** (que ligam com nível lógico baixo) trabalhando juntos. 
+
+Quando um transistor do par está ligado, o outro está desligado. Isso faz com que os circuitos CMOS consumam energia quase exclusivamente no momento em que mudam de estado, o que os torna extremamente eficientes — e é por isso que são a base de praticamente todos os processadores modernos.
 
 :::note[Autoestudo obrigatório]
 
@@ -591,83 +575,3 @@ lógicas utilizando transistores:
 * *NOT*
 
 :::
-
-:::tip[Exercício 4.06]
-
-A figura abaixo demonstra a utilização de transistores do tipo CMOS para a
-construção de uma porta lógica. Identifique qual porta lógica está sendo
-representada. Na imagem, *A* representa a entrada e *Q* representa a saída.
-
-<img
-  src={'../../../src/assets/img/porta1.png'}
-  alt="porta1"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '20vh',
-    marginRight: 'auto'
-  }}
-/>
-
-:::
-
-:::tip[Exercício 4.07]
-
-A figura abaixo demonstra a utilização de transistores do tipo CMOS para a
-construção de uma porta lógica. Identifique qual porta lógica está sendo
-representada. Na imagem, *A* e *B* representam as entradas e *Out* representa a
-saída.
-
-<img
-  src="<https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/CMOS_NAND.svg/1200px-CMOS_NAND.svg.png>"
-  alt="porta1"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '40vh',
-    marginRight: 'auto'
-  }}
-/>
-
-:::
-
-:::tip[Exercício 4.08]
-
-A figura abaixo demonstra a utilização de transistores do tipo CMOS para a
-construção de uma porta lógica. Identifique qual porta lógica está sendo
-representada. Na imagem, *A* e *B* representam as entradas e *Y* representa a
-saída.
-
-<img
-  src="<https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Cmos_nor.svg/300px-Cmos_nor.svg.png>"
-  alt="porta1"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '40vh',
-    marginRight: 'auto'
-  }}
-/>
-
-:::
-
-:::tip[Exercício 4.09]
-
-A figura abaixo demonstra a utilização de transistores do tipo CMOS para a
-construção de uma porta lógica. Identifique qual porta lógica está sendo
-representada. Na imagem, *A* e *B* representam as entradas e *Q* representa a
-saída.
-
-<img
-  src="<https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/CMOS_OR.svg/2560px-CMOS_OR.svg.png>"
-  alt="porta1"
-  style={{
-    display: 'block',
-    marginLeft: 'auto',
-    maxHeight: '30vh',
-    marginRight: 'auto'
-  }}
-/>
-
-:::
----

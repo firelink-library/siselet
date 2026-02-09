@@ -22,3 +22,4 @@ public/
 
 # macOS-specific files
 .DS_Store
+AGENTS.md
