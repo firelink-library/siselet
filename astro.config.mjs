@@ -10,7 +10,7 @@ import rehypeKatex from 'rehype-katex';
 export default defineConfig({
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [[rehypeKatex, { output: 'html' }]],
   },
   site: 'https://firelink-library.github.io',
   base: '/siselet',
@@ -31,6 +31,9 @@ export default defineConfig({
         label: 'GitHub',
         href: 'https://github.com/firelink-library/siselet'
       }],
+      customCss: [
+        './src/styles/custom.css',
+      ],
       plugins: [
         catppuccin({
           dark: { flavor: "macchiato", accent: "mauve" },

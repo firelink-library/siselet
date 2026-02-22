@@ -1,0 +1,4 @@
+/* Import KaTeX CSS for proper math rendering */
+@import 'katex/dist/katex.min.css';
+
+/* Additional custom styles can be added here */
