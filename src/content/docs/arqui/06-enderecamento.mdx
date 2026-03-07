@@ -1,6 +1,51 @@
 ---
-title: Endereçamento de memória
+title: Memória cache
 sidebar:
     order: 6
 slug: enderecamento
 ---
+
+import { Image } from 'astro:assets';
+import stallings from '../../../assets/arqui/memoria/stallings.webp';
+
+## Conteúdo obrigatório
+
+:::note[Computer Organization and Architecture - *William Stallings*]
+<div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+  <Image src={stallings} alt="Capa do livro Computer Organization and Architecture de William Stallings" style={{ height: '180px', width: 'auto', flexShrink: 0 }} />
+  <div>
+
+    **Capítulo 5**
+
+    Memória cache
+    - 5.1 - princípios da memória cache
+    - 5.2 - elementos de design de cache
+  </div>
+</div>
+:::
+
+## Perguntas de validação
+
+Se esforce para responder a essas perguntas com suas próprias palavras. Busque
+por essas informações no material de referência ou de qualquer outra fonte.
+
+1. Descreva e compare as três funções de mapeamento de cache: mapeamento direto,
+   mapeamento associativo e mapeamento *set-associativo*. Quais são as vantagens
+   e desvantagens de cada abordagem?
+
+2. Para cada tipo de mapeamento abaixo, descreva os campos em que um endereço de
+   memória principal é dividido e defina cada campo:
+    * **a.** Mapeamento direto
+    * **b.** Mapeamento associativo
+    * **c.** Mapeamento *set-associativo*
+
+3. Qual é a diferença entre uma **cache unificada** e uma **cache dividida**
+   (*split cache*)? Quais são as vantagens de cada abordagem?
+
+4. Uma cache possui linhas de 64 bytes. Para identificar qual byte dentro de uma
+   linha um endereço aponta, quantos bits são necessários no campo de *Offset*?
+
+5. Uma cache *set-associativa* de 4 vias possui linhas de 32 bytes e tamanho
+   total de 4 kB. A memória principal tem 32 MB e é endereçável por byte. Mostre
+   o formato dos endereços de memória principal, indicando o número de bits de
+   cada campo (*Tag*, *Set*, *Word*).
