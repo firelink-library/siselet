@@ -5,6 +5,80 @@ sidebar:
 slug: representacoes-numericas
 ---
 
+import { Image } from 'astro:assets';
+import stallings from '../../../assets/arqui/memoria/stallings.webp';
+
+## Conteúdo obrigatório
+
+:::note[Computer Organization and Architecture - *William Stallings*]
+<div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+  <Image src={stallings} alt="Capa do livro Computer Organization and Architecture de William Stallings" style={{ height: '180px', width: 'auto', flexShrink: 0 }} />
+  <div>
+
+    **Capítulo 10**
+
+    Sistemas numéricos
+    - 10.1 - o sistema decimal
+    - 10.2 - sistemas numéricos posicionais
+    - 10.3 - sistema binário
+    - 10.4 - conversão binário/decimal
+    - 10.5 - sistema hexadecimal
+  </div>
+</div>
+:::
+
+## Perguntas de validação
+
+Se esforce para responder a essas perguntas com suas próprias palavras. Busque
+por essas informações no material de referência ou de qualquer outra fonte.
+
+1. Conte de 1 a $20_{10}$ nas seguintes bases:
+    * **a.** 8
+    * **b.** 6
+    * **c.** 5
+    * **d.** 3
+
+2. Ordene os números $(1{,}1)_2$, $(1{,}4)_{10}$ e $(1{,}5)_{16}$ do menor para
+   o maior.
+
+3. Realize as seguintes conversões de base:
+    * **a.** $54_8$ para base 5
+    * **b.** $312_4$ para base 7
+    * **c.** $520_6$ para base 7
+    * **d.** $12212_3$ para base 9
+
+4. Que generalizações você pode fazer sobre a conversão de um número de uma base
+   para uma potência dessa mesma base? Por exemplo, de base 3 para base 9
+   ($3^2$), de base 2 para base 4 ($2^2$) ou de base 2 para base 8 ($2^3$)?
+
+5. Converta os seguintes números binários para seus equivalentes decimais:
+    * **a.** 010101
+    * **b.** 110011
+    * **c.** 100011
+    * **d.** 101000
+    * **e.** 101100
+
+6. Converta os seguintes números binários fracionários para seus equivalentes
+   decimais:
+    * **a.** 001100.101
+    * **b.** 010010.111
+    * **c.** 0010111111.11
+
+7. Converta os seguintes números decimais para seus equivalentes binários:
+    * **a.** 27
+    * **b.** 81
+    * **c.** 126
+    * **d.** 207
+    * **e.** 333
+
+8. Converta os seguintes números decimais fracionários para seus equivalentes
+   binários:
+    * **a.** 36,25
+    * **b.** 72,75
+    * **c.** 45,3750
+
+## Conteúdo extra
+
 Como vimos até então, o mundo digital opera exclusivamente em base 2 (binário).
 Isso significa que temos apenas os dígitos 0 e 1 disponíveis em vez dos 10
 dígitos disponíveis no sistema decimal.
@@ -401,3 +475,4 @@ máximo? Qual o valor mínimo? Quais os dois valores mais próximos de 0
 possíveis?
 
 :::
+
