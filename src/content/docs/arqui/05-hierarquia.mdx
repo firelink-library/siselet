@@ -4,3 +4,73 @@ sidebar:
     order: 5
 slug: hierarquia-memoria
 ---
+
+import { Image } from 'astro:assets';
+import stallings from '../../../assets/arqui/memoria/stallings.webp';
+
+## Conteúdo obrigatório
+
+:::note[Computer Organization and Architecture - *William Stallings*]
+<div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+  <Image src={stallings} alt="Capa do livro Computer Organization and Architecture de William Stallings" style={{ height: '180px', width: 'auto', flexShrink: 0 }} />
+  <div>
+
+    **Capítulo 4**
+
+    A hierarquia de memória - localidade e performance
+    - 4.1 - princípios de localidade
+    - 4.2 - características de sistemas de memória
+    - 4.3 - a hierarquia de memória
+  </div>
+</div>
+:::
+
+## Perguntas de validação
+
+Se esforce para responder a essas perguntas com suas próprias palavras. Busque
+por essas informações no material de referência ou de qualquer outra fonte.
+
+1. O que são localidade temporal e localidade espacial? Dê um exemplo concreto
+   de cada uma em um programa simples (ex: um loop percorrendo um array).
+
+2. Diferencie os seguintes termos no contexto de sistemas de memória:
+    * *word* (palavra)
+    * unidade endereçável
+    * unidade de transferência
+
+3. Considere os dois programas abaixo, que realizam a mesma operação:
+
+   ```c
+   // Programa A
+   for (i = 1; i < n; i++) {
+       Z[i] = X[i] - Y[i];
+       Z[i] = Z[i] * Z[i];
+   }
+
+   // Programa B
+   for (i = 1; i < n; i++)
+       Z[i] = X[i] - Y[i];
+
+   for (i = 1; i < n; i++)
+       Z[i] = Z[i] * Z[i];
+   ```
+
+    **a.** Qual é a função realizada pelos dois programas?
+
+    **b.** Qual versão tem melhor desempenho em termos de uso de cache, e por quê?
+
+4. Considere o trecho de código abaixo:
+
+   ```c
+   for (m = 15; m > 0; m--)
+       while (n < 27)
+           a[m] = a[m] + n;
+   ```
+
+    **a.** Dê um exemplo de localidade espacial no código.
+
+    **b.** Dê um exemplo de localidade temporal no código.
+
+5. Descreva passo a passo o que acontece quando o processador solicita um dado
+   que não está em cache (*cache miss*). Quais memórias são consultadas e em que
+   ordem?
