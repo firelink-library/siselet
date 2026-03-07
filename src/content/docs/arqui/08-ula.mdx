@@ -4,3 +4,46 @@ sidebar:
     order: 8
 slug: ula
 ---
+
+import { Image } from 'astro:assets';
+import stallings from '../../../assets/arqui/memoria/stallings.webp';
+
+## Conteúdo obrigatório
+
+:::note[Computer Organization and Architecture - *William Stallings*]
+<div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+  <Image src={stallings} alt="Capa do livro Computer Organization and Architecture de William Stallings" style={{ height: '180px', width: 'auto', flexShrink: 0 }} />
+  <div>
+
+    **Capítulo 11**
+
+    Aritmética computacional
+    - 11.1 - a unidade de lógica e aritmética
+    - 11.2 - representação de inteiros
+    - 11.3 - aritmética de inteiros
+    - 11.4 - representação de ponto flutuante
+    - 11.5 - aritmética de ponto flutuante
+  </div>
+</div>
+:::
+
+## Perguntas de validação
+
+Se esforce para responder a essas perguntas com suas próprias palavras. Busque
+por essas informações no material de referência ou de qualquer outra fonte.
+
+1. Quais são as principais desvantagens da representação **sinal-magnitude**?
+
+2. Por que a representação em **complemento de dois** é comumente usada na
+   implementação da parte inteira da ULA em vez da representação sinal-magnitude?
+
+3. Quais são os quatro elementos essenciais de um número em notação de
+   **ponto flutuante**?
+
+4. Qual é o benefício de usar a representação *biased* (polarizada) para
+   o campo do **expoente** de um número de ponto flutuante?
+
+5. Represente $+4$ e $-6$ em **sinal-magnitude** e em **complemento de
+   dois**, usando 4 bits.
+
+6. Represente $-85$ e $+52$ em **complemento de dois** usando 8 bits.
