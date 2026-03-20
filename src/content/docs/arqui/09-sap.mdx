@@ -1,9 +1,49 @@
 ---
-title: Arquitetura SAP
+title: Arquitetura de CPU
 sidebar:
     order: 9
 slug: sap
 ---
+
+import { Image } from 'astro:assets';
+import stallings from '../../../assets/arqui/memoria/stallings.webp';
+import malvino from '../../../assets/arqui/memoria/malvino.jpg';
+
+## Conteúdo obrigatório
+
+:::note[Digital computer electronics - *Albert Malvino*]
+<div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+  <Image src={malvino} alt="Capa do livro digital computer electronics" style={{ height: '180px', width: 'auto', flexShrink: 0 }} />
+  <div>
+
+    **Capítulo 10**
+
+    SAP-1
+    - 10.1 - arquitetura
+    - 10.2 - instruction set
+    - 10.3 - programando o SAP-1
+  </div>
+</div>
+:::
+
+:::note[Computer Organization and Architecture - *William Stallings*]
+<div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+  <Image src={stallings} alt="Capa do livro Computer Organization and Architecture de William Stallings" style={{ height: '180px', width: 'auto', flexShrink: 0 }} />
+  <div>
+
+    **Capítulo 1**
+
+    Conceitos básicos e evolução do computador
+    - 1.1 - organização e arquitetura
+    - 1.2 - estrutura e função
+    - 1.3 - o computador IAS
+  </div>
+</div>
+:::
+
+## Perguntas de validação
+
+## Conteúdo adicional
 
 Para reforçar o conhecimento adquirido sobre arquiteturas básicas de
 processadores, vamos estudar uma arquitetura apresentada em um livro clássico
@@ -13,9 +53,9 @@ proposta para o SAP I.
 
 <center>![](../../../assets/img/archsap.png)</center>
 
-## 1. Componentes do SAP I
+### 1. Componentes do SAP I
 
-### 1.1. Registradores
+#### 1.1. Registradores
 
 Os registradores do SAP são o **PC**, o **AC**, o **B**, o **MAR**, o **IR** e
 o **Out**. Vamos explorar a funcionalidade de cada um a seguir:
@@ -101,7 +141,7 @@ Sinais de controle:
   invertido.
 * *Clk* - Sinal de clock. O **Out** opera em *borda de subida*.
 
-### 1.2. Unidade de aritmética
+#### 1.2. Unidade de aritmética
 
 A unidade de aritmética do SAP I é extremamente simples e possui apenas as
 operações de soma e subtração. Quando opera em modo de subtração, assume-se a
@@ -116,7 +156,7 @@ Sinais de controle:
   para controlar o fluxo de dados para o *W bus*. Quando *Ep* está em *LOW*, o
   valor em **Add/Sub** é carregado no *W bus*.
 
-### 1.3. Circuito de controle
+#### 1.3. Circuito de controle
 
 O circuito de controle é a unidade do SAP I responsável por enviar os sinais de
 controle para cada um dos outros componentes da CPU. Para isso, ela controla
@@ -125,7 +165,7 @@ controle**. Essa palavra de controle pode ser vista na figura 14.02.
 
 <center>![](../../../assets/img/controlword.png)</center>
 
-## 2. Instruções do SAP I
+### 2. Instruções do SAP I
 
 O conjunto de instruções do SAP I é bastante enxuto, consistindo em apenas 5
 operações. As figuras 14.03 e 14.04 exibem essas operações possíveis.
@@ -142,7 +182,7 @@ Resolva o seguinte exercício do livro do Malvino.
 
 :::
 
-## 3. Ciclo de Fetch
+### 3. Ciclo de Fetch
 
 Uma das coisas que ainda não vimos é como exatamente é possível implementar os
 ciclos propostos por von Neumann. O SAP I apresenta a solução para este
@@ -186,7 +226,7 @@ estados deste ciclo.
 
 <center>![](../../../assets/img/fetchcycle.jpg)</center>
 
-## 4. Ciclo de Execute
+### 4. Ciclo de Execute
 
 O ciclo de execute é um pouco mais complexo, pois há uma configuração diferente
 da palavra de controle para cada instrução do *instruction set* do SAP I. Como
